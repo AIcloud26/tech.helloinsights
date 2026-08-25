@@ -1,0 +1,22 @@
+# Release Checklist
+
+- [ ] Run `python scripts/build-tech-data.py`
+- [ ] Confirm `data/technology-home.json` exists
+- [ ] Confirm every article has `data/articles/<id>.json`
+- [ ] Confirm every category has `data/categories/<category>.json`
+- [ ] Test `/`
+- [ ] Test `/ai/`
+- [ ] Test `/software/`
+- [ ] Test `/cybersecurity/`
+- [ ] Test `/gadgets/`
+- [ ] Test `/developer/`
+- [ ] Test `/future-tech/`
+- [ ] Test at least 3 article URLs
+- [ ] Verify browser Network tab: article page must not request `articles-technology.json`
+- [ ] Verify category page must not request `articles-technology.json`
+- [ ] Verify disabled ads do not request AdSense/MGID
+- [ ] Verify images have dimensions and lazy loading
+- [ ] Verify canonical URLs
+- [ ] Verify sitemap contains canonical URLs only
+- [ ] Run Lighthouse mobile
+- [ ] Check CLS after ads are enabled
