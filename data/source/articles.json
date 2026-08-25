@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "id": "demo-ai-001",
+      "title": "How AI Is Moving From Experiment to Everyday Infrastructure",
+      "excerpt": "The next phase of AI is less about novelty and more about where the technology becomes part of ordinary software and business workflows.",
+      "category": "Artificial Intelligence",
+      "subcategory": "ai",
+      "date": "2026-08-25",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      "keyTakeaways": [
+        "AI is increasingly embedded inside existing products rather than presented as a standalone feature.",
+        "The real competitive advantage is shifting toward workflow, data and distribution.",
+        "Infrastructure costs and reliability remain as important as model quality."
+      ],
+      "content": "<p>Artificial intelligence is moving into a less theatrical phase. The question is no longer whether a model can produce an impressive demo. The more useful question is where it becomes dependable enough to sit inside a workflow people already use.</p><h2>The product is bigger than the model</h2><p>Modern AI products combine models with data, interfaces, orchestration, permissions and distribution. That changes how companies should evaluate new capabilities. A model upgrade matters, but the surrounding product determines whether customers notice the difference.</p><blockquote><p>The most valuable AI feature may be the one users stop noticing because it simply works.</p></blockquote><h2>What to watch next</h2><p>Look for AI features that reduce friction in existing work rather than asking users to adopt an entirely new habit. Reliability, latency and economics will increasingly determine which experiments become durable products.</p>"
+    },
+    {
+      "id": "demo-software-001",
+      "title": "Why Software Products Are Becoming More Context-Aware",
+      "excerpt": "Applications are using more context to make interfaces adaptive, but the best products still make control and transparency obvious.",
+      "category": "Software & Apps",
+      "subcategory": "software",
+      "date": "2026-08-23",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      "content": "<p>Software is becoming better at understanding what a user is trying to do. The change is subtle, but it can remove repeated steps from everyday workflows.</p><h2>Context creates convenience</h2><p>Context-aware features can surface information at the right moment and reduce the number of settings users need to manage.</p>"
+    }
+  ]
+}

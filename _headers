@@ -1,0 +1,6 @@
+/assets/*
+  Cache-Control: public, max-age=86400
+/config/*
+  Cache-Control: public, max-age=3600
+/data/generated/*
+  Cache-Control: public, max-age=3600

@@ -1,0 +1,6 @@
+/* Vertical-specific design tokens.
+   Copy this file for Finance / Health / other matrix sites. */
+:root{
+  --accent:#ff6b35;
+  --accent-dark:#e75b2b;
+}
