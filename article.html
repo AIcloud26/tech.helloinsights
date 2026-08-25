@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Article | HelloInsights Technology</title>
+    <meta name="description" id="metaDesc" content="Technology article from HelloInsights.">
+    <link rel="canonical" id="canonicalUrl" href="https://technology.helloinsights.online/">
+    <!-- OG -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" id="ogTitle" content="Article | HelloInsights Technology">
+    <meta property="og:description" id="ogDesc" content="">
+    <meta property="og:url" id="ogUrl" content="https://technology.helloinsights.online/">
+    <meta property="og:site_name" content="HelloInsights Technology">
+    <meta property="og:image" id="ogImage" content="">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twTitle" content="">
+    <meta name="twitter:description" id="twDesc" content="">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <!-- Config -->
+    <script src="site-config.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- JSON-LD -->
+    <script type="application/ld+json" id="jsonldArticle">
+    {"@context":"https://schema.org","@type":"Article","headline":"","datePublished":"","image":"","author":{"@type":"Organization","name":"HelloInsights"},"publisher":{"@type":"Organization","name":"HelloInsights Technology"}}
+    </script>
+    <script type="application/ld+json" id="jsonldBreadcrumb">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Technology","item":"https://technology.helloinsights.online/"}]}
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="tech-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="/" class="tech-logo">
+                <svg viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg" width="185" height="37">
+                    <rect x="2" y="6" width="32" height="32" rx="7" fill="#ff6b35"/>
+                    <text x="8" y="29" font-size="17" font-weight="900" fill="#fff" font-family="monospace">{"}"}</text>
+                    <text x="42" y="31" font-size="22" font-weight="800" fill="#1a1a2e" font-family="Georgia, serif">Hello</text>
+                    <text x="107" y="31" font-size="22" font-weight="800" fill="#ff6b35" font-family="Georgia, serif">Insights</text>
+                </svg>
+                <span class="header-badge">Technology</span>
+            </a>
+            <nav class="tech-nav" id="mainNav">
+                <a href="index.html?cat=ai">AI</a>
+                <a href="index.html?cat=software">Software</a>
+                <a href="index.html?cat=cybersecurity">Cybersecurity</a>
+                <a href="index.html?cat=gadgets">Gadgets</a>
+                <a href="index.html?cat=developer">Developer</a>
+                <a href="index.html?cat=future-tech">Future Tech</a>
+            </nav>
+            <div class="header-actions">
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+                    <button id="searchBtn" aria-label="Search">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Hero Image (constrained width) -->
+    <div class="article-hero-wrap">
+        <img id="articleHeroImg" src="" alt="" loading="eager" fetchpriority="high" width="800" height="450">
+    </div>
+
+    <!-- Article -->
+    <article class="tech-article">
+        <div class="article-content-wrap">
+            <!-- Breadcrumb -->
+            <nav class="article-meta-top">
+                <a href="#" class="article-cat-link" id="articleCatLink">Category</a>
+                <time id="articleDate" datetime=""></time>
+            </nav>
+
+            <h1 id="articleTitle" class="article-h1"></h1>
+            <p class="article-lead" id="articleLead"></p>
+
+            <!-- Ad: article-banner-top -->
+            <div class="ad-slot" id="ad-article-banner-top" data-ad-slot="article-banner-top"></div>
+
+            <!-- Editor Note (optional, for original commentary) -->
+            <div class="editor-note" id="editorNote" style="display:none">
+                <span class="ed-label">Editor's Note</span>
+                <div id="editorNoteContent"></div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="article-body" id="articleBody"></div>
+
+            <!-- Ad: article-banner-mid -->
+            <div class="ad-slot" id="ad-article-banner-mid" data-ad-slot="article-banner-mid"></div>
+
+            <!-- Share -->
+            <div class="share-section">
+                <h4>Share this story</h4>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="#" class="share-btn facebook" id="shareFacebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="#" class="share-btn linkedin" id="shareLinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Related Stories -->
+            <section class="related-section" id="relatedSection">
+                <h2>Related Stories</h2>
+                <div class="related-grid" id="relatedGrid"></div>
+            </section>
+
+            <!-- Explore Topics -->
+            <section class="explore-topics-section">
+                <h2>Explore Topics</h2>
+                <div class="topics-pills" id="topicsPills"></div>
+            </section>
+
+            <!-- Back to Home -->
+            <div class="back-home">
+                <a href="/">&larr; Back to Technology</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="tech-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>HelloInsights Technology</strong>
+                <p>Editorial-grade technology coverage for the digital world.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Topics</h4>
+                <ul id="footerTopics"></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Network</h4>
+                <ul>
+                    <li><a href="https://helloinsights.online" target="_blank" rel="noopener">HelloInsights Main</a></li>
+                    <li><a href="https://finance.helloinsights.online" target="_blank" rel="noopener">Finance</a></li>
+                    <li><a href="https://health.helloinsights.online" target="_blank" rel="noopener">Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HelloInsights. All rights reserved.</p>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Ads -->
+    <script src="ads-config.js"></script>
+    <script src="ads.js"></script>
+
+    <script>
+    (function() {
+        'use strict';
+        var params = new URLSearchParams(window.location.search);
+        var articleId = params.get('id');
+        if (!articleId) { window.location.href = '/'; return; }
+
+        var allArticles = [];
+        var jsonFile = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG.jsonFile : 'technology-index.json';
+        var fullJsonFile = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG.fullArticleJson : 'articles-technology.json';
+        var opinionFile = 'opinions.json';
+        var base = 'https://technology.helloinsights.online';
+
+        Promise.all([
+            fetch(jsonFile, {cache:'no-cache'}).then(function(r){return r.json();}),
+            fetch(fullJsonFile, {cache:'no-cache'}).then(function(r){return r.json();}).catch(function(){return null;}),
+            fetch(opinionFile, {cache:'no-cache'}).then(function(r){return r.json();}).catch(function(){return null;})
+        ]).then(function(results) {
+            var indexData = results[0];
+            var fullData = results[1];
+            var opinionData = results[2];
+            allArticles = indexData.articles || [];
+
+            var article = allArticles.find(function(a) { return String(a.id) === String(articleId); });
+            if (!article) { window.location.href = '/'; return; }
+
+            var content = '';
+            if (fullData && fullData.articles) {
+                var full = fullData.articles.find(function(a) { return String(a.id) === String(articleId); });
+                if (full) content = full.content || '';
+            }
+
+            // Check for editor opinion/notes
+            var opinion = null;
+            if (opinionData && opinionData.articles) {
+                opinion = opinionData.articles.find(function(a) { return String(a.id) === String(articleId); });
+            }
+
+            renderArticle(article, content, opinion);
+            renderRelated(article);
+            renderExploreTopics(article);
+            renderFooter();
+            initSearch();
+        }).catch(function(err) {
+            console.error('Load error:', err);
+        });
+
+        function renderArticle(art, content, opinion) {
+            // Hero image — use moderate size (800w), not full width
+            var imgUrl = art.image || SITE_CONFIG.fallbackImage;
+            imgUrl = imgUrl.replace(/w=\d+/, 'w=800').replace(/h=\d+/, 'h=450');
+
+            var catUrl = SITE_CONFIG.categoryUrlMap[art.subcategory] || 'index.html';
+            var catName = art.category || '';
+            var articleUrl = base + '/article.html?id=' + encodeURIComponent(art.id);
+
+            // Meta
+            var titleText = art.title + ' | HelloInsights Technology';
+            var descText = art.excerpt || art.title;
+            document.title = titleText;
+            document.getElementById('metaDesc').setAttribute('content', descText);
+            document.getElementById('canonicalUrl').setAttribute('href', articleUrl);
+            document.getElementById('ogTitle').setAttribute('content', titleText);
+            document.getElementById('ogDesc').setAttribute('content', descText);
+            document.getElementById('ogUrl').setAttribute('content', articleUrl);
+            document.getElementById('ogImage').setAttribute('content', imgUrl);
+            document.getElementById('twTitle').setAttribute('content', titleText);
+            document.getElementById('twDesc').setAttribute('content', descText);
+
+            // JSON-LD
+            var jsonld = {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": art.title,
+                "datePublished": art.date,
+                "image": imgUrl,
+                "description": descText,
+                "author": { "@type": "Organization", "name": "HelloInsights" },
+                "publisher": { "@type": "Organization", "name": "HelloInsights Technology" },
+                "mainEntityOfPage": { "@type": "WebPage", "@id": articleUrl }
+            };
+            document.getElementById('jsonldArticle').textContent = JSON.stringify(jsonld);
+
+            var bcl = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Technology", "item": base + "/" },
+                    { "@type": "ListItem", "position": 2, "name": catName, "item": base + "/" + catUrl },
+                    { "@type": "ListItem", "position": 3, "name": art.title, "item": articleUrl }
+                ]
+            };
+            document.getElementById('jsonldBreadcrumb').textContent = JSON.stringify(bcl);
+
+            // Render
+            document.getElementById('articleCatLink').textContent = catName;
+            document.getElementById('articleCatLink').href = catUrl;
+            document.getElementById('articleDate').textContent = fmtDate(art.date);
+            document.getElementById('articleDate').setAttribute('datetime', art.date);
+            document.getElementById('articleTitle').textContent = art.title;
+            document.getElementById('articleLead').textContent = art.excerpt || '';
+
+            var heroImg = document.getElementById('articleHeroImg');
+            heroImg.src = imgUrl;
+            heroImg.alt = art.title;
+
+            // Editor note / opinion
+            if (opinion && opinion.note) {
+                var noteEl = document.getElementById('editorNote');
+                var noteContent = document.getElementById('editorNoteContent');
+                noteContent.innerHTML = opinion.note;
+                noteEl.style.display = '';
+            }
+
+            // Body
+            if (content) {
+                document.getElementById('articleBody').innerHTML = content;
+            } else {
+                document.getElementById('articleBody').innerHTML = '<p>' + esc(art.excerpt || art.title) + '</p>';
+            }
+
+            // If opinion has additional paragraphs, append after body
+            if (opinion && opinion.additionalContent) {
+                var extraDiv = document.createElement('div');
+                extraDiv.innerHTML = '<h2>Our Take</h2>' + opinion.additionalContent;
+                document.getElementById('articleBody').appendChild(extraDiv);
+            }
+
+            // Share
+            var encodedUrl = encodeURIComponent(articleUrl);
+            var encodedTitle = encodeURIComponent(art.title);
+            document.getElementById('shareTwitter').href = 'https://twitter.com/intent/tweet?url=' + encodedUrl + '&text=' + encodedTitle;
+            document.getElementById('shareFacebook').href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl;
+            document.getElementById('shareLinkedIn').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl;
+        }
+
+        function renderRelated(art) {
+            var related = allArticles.filter(function(a) {
+                return a.subcategory === art.subcategory && a.id !== art.id;
+            }).slice(0, 3);
+            if (related.length === 0) {
+                related = allArticles.filter(function(a) { return a.id !== art.id; }).slice(0, 3);
+            }
+            var grid = document.getElementById('relatedGrid');
+            var html = '';
+            related.forEach(function(r) {
+                var imgUrl = r.image || SITE_CONFIG.fallbackImage;
+                imgUrl = imgUrl.replace(/w=\d+/, 'w=480').replace(/h=\d+/, 'h=270');
+                html += '<article class="related-card">' +
+                    '<a href="article.html?id=' + encodeURIComponent(r.id) + '">' +
+                    '<img src="' + imgUrl + '" alt="' + esc(r.title) + '" loading="lazy" decoding="async" width="480" height="270">' +
+                    '<h3>' + esc(r.title) + '</h3>' +
+                    '<time>' + fmtDate(r.date) + '</time>' +
+                    '</a></article>';
+            });
+            grid.innerHTML = html;
+        }
+
+        function renderExploreTopics(art) {
+            var pills = document.getElementById('topicsPills');
+            var html = '';
+            SITE_CONFIG.subcategories.forEach(function(sub) {
+                var url = SITE_CONFIG.categoryUrlMap[sub.id] || 'index.html?cat=' + sub.id;
+                var isCurrent = sub.id === art.subcategory;
+                html += '<a href="' + url + '" class="topic-pill' + (isCurrent ? ' current' : '') + '">' + esc(sub.name) + '</a>';
+            });
+            pills.innerHTML = html;
+        }
+
+        function renderFooter() {
+            var ul = document.getElementById('footerTopics');
+            var html = '';
+            SITE_CONFIG.subcategories.forEach(function(sub) {
+                var url = SITE_CONFIG.categoryUrlMap[sub.id] || 'index.html?cat=' + sub.id;
+                html += '<li><a href="' + url + '">' + esc(sub.name) + '</a></li>';
+            });
+            ul.innerHTML = html;
+        }
+
+        function initSearch() {
+            var input = document.getElementById('searchInput');
+            var btn = document.getElementById('searchBtn');
+            function doSearch() {
+                var q = input.value.toLowerCase().trim();
+                if (!q) return;
+                var results = allArticles.filter(function(a) {
+                    return a.title.toLowerCase().indexOf(q) !== -1;
+                });
+                if (results.length > 0) {
+                    window.location.href = 'article.html?id=' + encodeURIComponent(results[0].id);
+                } else {
+                    input.value = '';
+                    input.placeholder = 'No results found';
+                }
+            }
+            if (btn) btn.addEventListener('click', doSearch);
+            if (input) input.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') doSearch();
+            });
+        }
+
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('nav-open');
+        });
+
+        function fmtDate(d) { try { return new Date(d).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'}); } catch(e) { return d; } }
+        function esc(s) { if (!s) return ''; var d = document.createElement('div'); d.appendChild(document.createTextNode(s)); return d.innerHTML; }
+    })();
+    </script>
+</body>
+</html>

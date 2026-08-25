@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | HelloInsights Technology</title>
+    <meta name="description" content="About HelloInsights Technology — editorial-grade coverage of AI, software, cybersecurity, gadgets and emerging technology.">
+    <link rel="canonical" href="https://technology.helloinsights.online/about.html">
+    <script src="site-config.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="tech-header">
+        <div class="header-inner">
+            <a href="/" class="tech-logo">
+                <svg viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg" width="185" height="37">
+                    <rect x="2" y="6" width="32" height="32" rx="7" fill="#ff6b35"/>
+                    <text x="8" y="29" font-size="17" font-weight="900" fill="#fff" font-family="monospace">{"}"}</text>
+                    <text x="42" y="31" font-size="22" font-weight="800" fill="#1a1a2e" font-family="Georgia, serif">Hello</text>
+                    <text x="107" y="31" font-size="22" font-weight="800" fill="#ff6b35" font-family="Georgia, serif">Insights</text>
+                </svg>
+                <span class="header-badge">Technology</span>
+            </a>
+            <nav class="tech-nav" id="mainNav">
+                <a href="index.html?cat=ai">AI</a>
+                <a href="index.html?cat=software">Software</a>
+                <a href="index.html?cat=cybersecurity">Cybersecurity</a>
+                <a href="index.html?cat=gadgets">Gadgets</a>
+                <a href="index.html?cat=developer">Developer</a>
+                <a href="index.html?cat=future-tech">Future Tech</a>
+            </nav>
+            <div class="header-actions">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <article class="tech-article static-page">
+        <div class="article-content-wrap">
+            <h1>About HelloInsights Technology</h1>
+
+            <p>HelloInsights Technology is an independent technology publication covering artificial intelligence, software, cybersecurity, consumer gadgets, developer tools, and the innovations shaping the next decade.</p>
+
+            <p>We launched with a simple premise: technology coverage should be substantive, not promotional. Every article we publish is written to help readers understand what a development actually does, who it affects, and why it matters &mdash; without the hype cycles that dominate much of the tech press.</p>
+
+            <h2>What We Cover</h2>
+            <p>Our editorial focus spans six core areas:</p>
+            <ul>
+                <li><strong>Artificial Intelligence</strong> &mdash; model releases, enterprise adoption, AI safety, and the commercial landscape.</li>
+                <li><strong>Software &amp; Apps</strong> &mdash; platforms, developer tools, SaaS trends, and the software economy.</li>
+                <li><strong>Cybersecurity</strong> &mdash; threats, defenses, regulation, and the evolving security landscape.</li>
+                <li><strong>Gadgets</strong> &mdash; consumer hardware, wearables, smart home devices, and product reviews.</li>
+                <li><strong>Developer Technology</strong> &mdash; infrastructure, edge computing, 5G, and the tools builders rely on.</li>
+                <li><strong>Future Technology</strong> &mdash; quantum computing, robotics, blockchain, and emerging research.</li>
+            </ul>
+
+            <h2>Our Editorial Approach</h2>
+            <p>We combine reported analysis with clear, accessible writing. Our team draws on industry data, primary sources, and hands-on experience to produce articles that are accurate and useful. We do not accept payment for positive coverage, and we clearly distinguish between reported facts and editorial opinion.</p>
+
+            <p>When we express a view, we label it as such &mdash; in Editor's Notes and Our Take sections &mdash; so readers always know where reporting ends and perspective begins.</p>
+
+            <h2>Editorial Standards</h2>
+            <p>Accuracy matters to us. If you believe we have published an error, please contact us and we will investigate promptly and correct where appropriate.</p>
+
+            <h2 id="contact">Contact</h2>
+            <p>For editorial inquiries, corrections, or feedback, reach us at <a href="mailto:editor@helloinsights.online">editor@helloinsights.online</a>. For advertising or partnership questions, contact <a href="mailto:business@helloinsights.online">business@helloinsights.online</a>.</p>
+
+            <h2>Our Network</h2>
+            <p>HelloInsights Technology is part of the HelloInsights network, which also covers <a href="https://finance.helloinsights.online" target="_blank" rel="noopener">finance</a>, health, and other verticals. Visit the <a href="https://helloinsights.online" target="_blank" rel="noopener">HelloInsights main site</a> for the full picture.</p>
+
+            <div class="back-home" style="margin-top:40px;">
+                <a href="/">&larr; Back to Technology</a>
+            </div>
+        </div>
+    </article>
+
+    <footer class="tech-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>HelloInsights Technology</strong>
+                <p>Editorial-grade technology coverage for the digital world.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Topics</h4>
+                <ul id="footerTopics"></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Network</h4>
+                <ul>
+                    <li><a href="https://helloinsights.online" target="_blank" rel="noopener">HelloInsights Main</a></li>
+                    <li><a href="https://finance.helloinsights.online" target="_blank" rel="noopener">Finance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HelloInsights. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var ul = document.getElementById('footerTopics');
+        if (typeof SITE_CONFIG !== 'undefined') {
+            var html = '';
+            SITE_CONFIG.subcategories.forEach(function(sub) {
+                var url = SITE_CONFIG.categoryUrlMap[sub.id] || 'index.html?cat=' + sub.id;
+                html += '<li><a href="' + url + '">' + sub.name + '</a></li>';
+            });
+            ul.innerHTML = html;
+        }
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('nav-open');
+        });
+    })();
+    </script>
+</body>
+</html>
