@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Technology | HelloInsights Technology</title>
+  <meta name="description" content="Infrastructure, developer tools, edge computing and the systems builders rely on.">
+  <link rel="canonical" href="https://technology.helloinsights.online/developer/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Developer Technology | HelloInsights Technology">
+  <meta property="og:description" content="Infrastructure, developer tools, edge computing and the systems builders rely on.">
+  <meta property="og:url" content="https://technology.helloinsights.online/developer/">
+  <meta property="og:site_name" content="HelloInsights Technology">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../site-config.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Developer Technology",
+    "description":"Infrastructure, developer tools, edge computing and the systems builders rely on.",
+    "url":"https://technology.helloinsights.online/developer/",
+    "isPartOf":{"@type":"WebSite","name":"HelloInsights Technology","url":"https://technology.helloinsights.online/"}
+  }
+  </script>
+</head>
+<body>
+<header class="tech-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="../" class="tech-logo">
+      <svg viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg" width="185" height="37" aria-label="HelloInsights">
+        <rect x="2" y="6" width="32" height="32" rx="7" fill="#ff6b35"/>
+        <text x="8" y="29" font-size="17" font-weight="900" fill="#fff" font-family="monospace">{"}"}</text>
+        <text x="42" y="31" font-size="22" font-weight="800" fill="#1a1a2e" font-family="Georgia, serif">Hello</text>
+        <text x="107" y="31" font-size="22" font-weight="800" fill="#ff6b35" font-family="Georgia, serif">Insights</text>
+      </svg>
+      <span class="header-badge">Technology</span>
+    </a>
+    <nav class="tech-nav" id="mainNav">
+      <a href="../ai/">AI</a>
+      <a href="../software/">Software</a>
+      <a href="../cybersecurity/">Cybersecurity</a>
+      <a href="../gadgets/">Gadgets</a>
+      <a href="../developer/">Developer</a>
+      <a href="../future-tech/">Future Tech</a>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="cat-hero">
+  <div class="cat-hero-inner">
+    <nav class="tech-breadcrumb"><a href="../">Technology</a> &rsaquo; <span>Developer Technology</span></nav>
+    <h1>Developer Technology</h1>
+    <p>Infrastructure, developer tools, edge computing and the systems builders rely on.</p>
+  </div>
+</section>
+
+<div class="ad-slot" id="ad-native-top" data-ad-slot="native-top"></div>
+
+<section class="cat-grid-section">
+  <div class="container">
+    <div class="cat-grid" id="articleGrid">
+      <div class="loading">Loading articles...</div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot" id="ad-banner-bottom" data-ad-slot="banner-bottom"></div>
+
+<section class="explore-section">
+  <div class="container">
+    <h2>Explore Other Topics</h2>
+    <div class="topics-grid" id="topicsGrid"></div>
+  </div>
+</section>
+
+<footer class="tech-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>HelloInsights Technology</strong>
+      <p>Editorial-grade technology coverage for the digital world.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Topics</h4>
+      <ul id="footerTopics"></ul>
+    </div>
+    <div class="footer-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="https://helloinsights.online" target="_blank" rel="noopener">HelloInsights Main</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 HelloInsights. All rights reserved.</p></div>
+</footer>
+
+<script src="../ads-config.js"></script>
+<script src="../ads.js"></script>
+
+<script>
+(function () {
+  'use strict';
+
+  var CATEGORY = 'developer';
+  var DATA_URL = '../technology-index.json';
+  var ARTICLE_URL = '../article.html?id=';
+  var BASE = 'https://technology.helloinsights.online';
+
+  function esc(value) {
+    if (value === null || value === undefined) return '';
+    var d = document.createElement('div');
+    d.textContent = String(value);
+    return d.innerHTML;
+  }
+
+  function imageUrl(article, width, height) {
+    var url = (article && article.image) || SITE_CONFIG.fallbackImage;
+    if (!url) return '';
+    url = url.replace(/([?&])w=\d+/i, '$1w=' + width);
+    url = url.replace(/([?&])h=\d+/i, '$1h=' + height);
+    return url;
+  }
+
+  function dateText(value) {
+    if (!value) return '';
+    try {
+      return new Date(value).toLocaleDateString('en-US', {
+        year:'numeric', month:'short', day:'numeric'
+      });
+    } catch (e) { return value; }
+  }
+
+  function matchesCategory(article) {
+    return article && (
+      article.subcategory === CATEGORY ||
+      article.categoryId === CATEGORY ||
+      article.category === CATEGORY
+    );
+  }
+
+  function renderArticles(articles) {
+    var grid = document.getElementById('articleGrid');
+    if (!articles.length) {
+      grid.innerHTML = '<div class="loading">No stories are available in this topic yet.</div>';
+      return;
+    }
+
+    grid.innerHTML = articles.map(function (article) {
+      var title = article.title || 'Untitled story';
+      var excerpt = article.excerpt || article.description || '';
+      var id = article.id;
+      return '<article class="cat-card">' +
+        '<a href="' + ARTICLE_URL + encodeURIComponent(id) + '">' +
+          '<img src="' + imageUrl(article, 640, 360) + '" alt="' + esc(title) + '" loading="lazy" decoding="async" width="640" height="360">' +
+          '<div class="cat-card-body">' +
+            '<span class="latest-cat">' + esc(article.category || 'Developer Technology') + '</span>' +
+            '<h2>' + esc(title) + '</h2>' +
+            '<p>' + esc(excerpt) + '</p>' +
+            '<time>' + esc(dateText(article.date)) + '</time>' +
+          '</div>' +
+        '</a>' +
+      '</article>';
+    }).join('');
+  }
+
+  function renderTopics() {
+    var topics = document.getElementById('topicsGrid');
+    var html = SITE_CONFIG.subcategories.map(function (item) {
+      var href = '../' + item.id + '/';
+      var active = item.id === CATEGORY ? ' active' : '';
+      return '<a class="topic-link' + active + '" href="' + href + '">' +
+        '<strong>' + esc(item.short || item.name) + '</strong>' +
+        '<span>' + esc(item.desc) + '</span>' +
+      '</a>';
+    }).join('');
+    topics.innerHTML = html;
+  }
+
+  function renderFooter() {
+    document.getElementById('footerTopics').innerHTML =
+      SITE_CONFIG.subcategories.map(function (item) {
+        return '<li><a href="../' + item.id + '/">' + esc(item.name) + '</a></li>';
+      }).join('');
+  }
+
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('nav-open');
+  });
+
+  fetch(DATA_URL, { cache: 'no-cache' })
+    .then(function (response) {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.json();
+    })
+    .then(function (data) {
+      var articles = Array.isArray(data) ? data : (data.articles || []);
+      articles = articles
+        .filter(matchesCategory)
+        .sort(function (a, b) {
+          return new Date(b.date || 0) - new Date(a.date || 0);
+        });
+      renderArticles(articles);
+      renderTopics();
+      renderFooter();
+    })
+    .catch(function (error) {
+      console.error('Category load failed:', error);
+      document.getElementById('articleGrid').innerHTML =
+        '<div class="loading">Unable to load stories right now. Please try again later.</div>';
+      renderTopics();
+      renderFooter();
+    });
+})();
+</script>
+</body>
+</html>

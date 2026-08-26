@@ -1,17 +1,20 @@
 var SITE_CONFIG = {
   siteName: "Technology",
   fullSiteName: "HelloInsights Technology",
-  baseUrl: "https://aicloud26.github.io/tech.helloinsights",
-  basePath: "/tech.helloinsights/",
+  baseUrl: "https://technology.helloinsights.online",
+  basePath: "/",
   mainSiteUrl: "https://helloinsights.online",
 
+  jsonFile: "technology-index.json",
   json: {
-    home: "data/technology-home.json",
-    categoryDir: "data/categories/",
-    articleDir: "data/articles/"
+    home: "technology-index.json",
+    categoryDir: "",
+    articleDir: ""
   },
 
   fallbackImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=450&fit=crop&fm=webp&q=75",
+
+  heroIntro: "Technology is moving quickly, but not every launch deserves attention. HelloInsights looks beyond the release cycle to examine the products, platforms, security shifts and emerging ideas that are changing how people and businesses use technology.",
 
   subcategories: [
     {id:"ai", name:"Artificial Intelligence", short:"AI", desc:"Models, products, enterprise adoption, safety and the business of intelligent systems."},
