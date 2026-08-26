@@ -10,7 +10,7 @@ HI.ready(function(){
     document.querySelector("#loadMore").onclick=latest;
     SITE.categories.forEach(function(c){
       var items=list.filter(function(a){return a.subcategory===c.id}).slice(0,3);if(!items.length)return;
-      document.querySelector("#topics").insertAdjacentHTML("beforeend",'<section class="section topic-section"><div class="container"><div class="topic-head"><h2>'+HI.esc(c.name)+'</h2><a href="/category.html?cat='+c.id+'">View all →</a></div><div class="topic-grid">'+items.map(function(a){return card(a,"topic-card",false)}).join("")+'</div></div></section>');
+      document.querySelector("#topics").insertAdjacentHTML("beforeend",'<section class="section topic-section"><div class="container"><div class="topic-head"><h2>'+HI.esc(c.name)+'</h2><a href="'+SITE.categoryUrlMap[c.id]+'">View all →</a></div><div class="topic-grid">'+items.map(function(a){return card(a,"topic-card",false)}).join("")+'</div></div></section>');
     });
     document.querySelector("#mostRead").innerHTML=list.slice(0,5).map(function(a){return '<li><a href="/article.html?id='+encodeURIComponent(a.id)+'">'+HI.esc(a.title)+'</a></li>'}).join("");
     HI.lazyEnhance();

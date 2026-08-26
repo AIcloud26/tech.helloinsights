@@ -30,7 +30,7 @@ Use:
 - `/future-tech/`
 - `/article.html?id=<id>` initially, or migrate to `/article/<slug>/` when static article generation is introduced.
 
-The current homepage still uses query-string category links such as `index.html?cat=ai`, while the category template already expects directory-style paths. This should be unified.
+Category navigation now uses real GitHub Pages directory routes such as `/ai/`, `/software/`, `/cybersecurity/`, `/gadgets/`, `/developer/`, and `/future-tech/`.
 
 ## P0 — Ad loading
 

@@ -22,12 +22,12 @@
                 <span class="header-badge">Technology</span>
             </a>
             <nav class="tech-nav" id="mainNav">
-                <a href="index.html?cat=ai">AI</a>
-                <a href="index.html?cat=software">Software</a>
-                <a href="index.html?cat=cybersecurity">Cybersecurity</a>
-                <a href="index.html?cat=gadgets">Gadgets</a>
-                <a href="index.html?cat=developer">Developer</a>
-                <a href="index.html?cat=future-tech">Future Tech</a>
+                <a href="/ai/">AI</a>
+                <a href="/software/">Software</a>
+                <a href="/cybersecurity/">Cybersecurity</a>
+                <a href="/gadgets/">Gadgets</a>
+                <a href="/developer/">Developer</a>
+                <a href="/future-tech/">Future Tech</a>
             </nav>
             <div class="header-actions">
                 <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -122,7 +122,7 @@
         if (typeof SITE_CONFIG !== 'undefined') {
             var html = '';
             SITE_CONFIG.subcategories.forEach(function(sub) {
-                var url = SITE_CONFIG.categoryUrlMap[sub.id] || 'index.html?cat=' + sub.id;
+                var url = SITE_CONFIG.categoryUrlMap[sub.id] || '/' + sub.id + '/';
                 html += '<li><a href="' + url + '">' + sub.name + '</a></li>';
             });
             ul.innerHTML = html;

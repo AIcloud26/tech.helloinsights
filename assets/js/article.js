@@ -7,7 +7,7 @@ HI.ready(function(){
     document.querySelector('meta[name="description"]').content=a.excerpt||a.title;
     document.querySelector("#canonical").href=url;
     document.querySelector("#heroImage").src=image;document.querySelector("#heroImage").alt=a.title;
-    document.querySelector("#category").textContent=a.category||SITE.name;document.querySelector("#category").href="/category.html?cat="+encodeURIComponent(a.subcategory||"");
+    document.querySelector("#category").textContent=a.category||SITE.name;document.querySelector("#category").href=SITE.categoryUrlMap[a.subcategory] || "/";
     document.querySelector("#date").textContent=HI.date(a.date);document.querySelector("#date").dateTime=a.date||"";
     document.querySelector("#title").textContent=a.title;document.querySelector("#dek").textContent=a.excerpt||"";
     document.querySelector("#reading").textContent=a.readingTime||HI.reading(a.content||"");
